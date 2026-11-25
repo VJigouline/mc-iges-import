@@ -1,0 +1,66 @@
+{
+  "name": "mc-iges-import",
+  "version": "1.0.0",
+  "description": "IGES importer for three.js in TypeScript: reads IGES CAD files and tessellates their trimmed NURBS and analytic surfaces, B-rep solids and curves, with colours, levels and units.",
+  "keywords": [
+    "iges",
+    "igs",
+    "cad",
+    "nurbs",
+    "brep",
+    "three",
+    "threejs",
+    "importer",
+    "loader",
+    "typescript"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "Documentation",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "peerDependencies": {
+    "three": ">=0.160.0"
+  },
+  "dependencies": {
+    "mc-curves": "github:VJigouline/mc-curves#234dbaa1192450f6e1c14fc642eaeaf4bc20a780",
+    "mc-surfaces": "github:VJigouline/mc-surfaces#803f896fa0cf358b54e2d49143a32b742107a9e5",
+    "mc-solids": "github:VJigouline/mc-solids#58c082ca5210407a9e31c63f9850c103e3a3de2e"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/three": "^0.187.0",
+    "@vitest/coverage-v8": "^5.1.0",
+    "three": "^0.187.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VJigouline/mc-iges-import.git"
+  }
+}
