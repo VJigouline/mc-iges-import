@@ -1,6 +1,6 @@
 # mc-iges-import
 
-A IGES importer for [three.js](https://threejs.org/), written in TypeScript. It reads IGES CAD files (to IGES 5.3) and tessellates their trimmed NURBS and analytic surfaces and B-rep solids, with free curves, colours, levels and units, in metres and Y up. It builds on the MeerCAD geometry libraries [mc-curves](https://github.com/VJigouline/mc-curves), [mc-surfaces](https://github.com/VJigouline/mc-surfaces) and [mc-solids](https://github.com/VJigouline/mc-solids). It was made for [SceneEditor](https://github.com/VJigouline/SceneEditor), and works in any three.js application.
+An IGES importer for [three.js](https://threejs.org/), written in TypeScript. It reads IGES CAD files (to IGES 5.3) and tessellates their trimmed NURBS and analytic surfaces and B-rep solids, with free curves, colours, levels and units, in metres and Y up. It builds on the MeerCAD geometry libraries [mc-curves](https://github.com/VJigouline/mc-curves), [mc-surfaces](https://github.com/VJigouline/mc-surfaces) and [mc-solids](https://github.com/VJigouline/mc-solids). It was made for [SceneEditor](https://github.com/VJigouline/SceneEditor), and works in any three.js application.
 
 ```ts
 import { loadIges } from 'mc-iges-import';
